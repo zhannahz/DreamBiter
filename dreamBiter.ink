@@ -1,44 +1,35 @@
-INCLUDE Dreams/mirrorDream
-
-
 VAR dreamCount = 0
 VAR optionCount = 3
 VAR sanity = 10
-VAR chaos = 0
+//VAR chaos = 0
 VAR currentDream = ""
+LIST successRecorder =
+    successDreamA,
+    successDreamB,
+    successDreamc,
+    successDreamD,
+    successDreamE,
+    successDreamF
+    
 LIST allDreams = 
     (A), 
     (B), 
     (C), 
     (D), 
     (E), 
-    (F),
-    (G),
-    (H),
-    (I),
-    (J)
+    (F)
 
 LIST visitedDreams = (none)
 
-LIST dream_A = (capitalist), (liberalism)
+LIST dream_A = (mirrorman), (ism)
 
-LIST dream_B = (paranoid), (scepticism)
+LIST dream_B = (dreamer_B), (ism)
 
-LIST dream_C = (painter), (sensualism)
+LIST dream_C = (dreamer_C), (ism)
 
-LIST dream_D = (governor), (utilist)
+LIST dream_D = (dreamer_D), (ism)
 
-LIST dream_E = (architect), (idealism)
-
-LIST dream_F = (worker), (practicalism)
-
-LIST dream_G = (killer), (nihilism)
-
-LIST dream_H = (writer), (nomadism)
-
-LIST dream_I = (homeless), (materialism)
-
-LIST dream_J = (scientist), (experimentalism)
+LIST dream_E = (dreamer_F), (ism)
 
 
 -> testroom
@@ -62,7 +53,7 @@ I am a dream biter, which I learnt as of today. -> becomingDreamBiter
     //{dreamManager()}
 - else:
     I have finished all my duty. Now it is the time for me to put an end to this.
-    -> Endings
+    -> Endings.endSubmitting
 }
 
 
@@ -110,22 +101,18 @@ I am a dream biter, which I learnt as of today. -> becomingDreamBiter
     
 {LIST_VALUE(chosenDream) == 5: -> Enter_badDream.dreamE } 
 
-{LIST_VALUE(chosenDream) == 6: -> Enter_badDream.dreamF } 
-
-{LIST_VALUE(chosenDream) == 7: -> Enter_badDream.dreamG } 
-
-{LIST_VALUE(chosenDream) == 8: -> Enter_badDream.dreamH } 
-
-{LIST_VALUE(chosenDream) == 9: -> Enter_badDream.dreamI } 
-
-{LIST_VALUE(chosenDream) == 10: -> Enter_badDream.dreamJ } 
     
 
 === Enter_badDream ===
 = dreamA
     This is a dream of a {LIST_MIN(dream_A)}.
-    ... 
-    -> Eat_dream
+    INCLUDE Dreams/mirrorDream
+    {successRecorder !? successDreamA:
+        -> Eat_dream
+    -  else:
+        -> Lose_dream
+    }
+    
 = dreamB
     This dream is about a {LIST_MIN(dream_B)}.
     ...
@@ -142,27 +129,21 @@ I am a dream biter, which I learnt as of today. -> becomingDreamBiter
     This dream is about a {LIST_MIN(dream_E)}.
     ...
     -> Eat_dream
-= dreamF
-    This dream is about a {LIST_MIN(dream_F)}.
-    ...
-    -> Eat_dream
-= dreamG
-    This dream is about a {LIST_MIN(dream_G)}.
-    ...
-    -> Eat_dream
-= dreamH
-    This dream is about a {LIST_MIN(dream_H)}.
-    ...
-    -> Eat_dream
-= dreamI
-    This dream is about a {LIST_MIN(dream_I)}.
-    ...
-    -> Eat_dream
-= dreamJ
-    This dream is about a {LIST_MIN(dream_J)}.
-    ...
-    -> Eat_dream
+
     //fallback
+
+=== Lose_dream ===
+~ sanity -= 4
+YOUR SANITY LEVEL DECREASE TO {sanity}.
+
+{sanity < 0:
+    YOU PERISHES AS YOUR ENERGY CAN NO LONGER SUSTAIN YOU. THE NEXT GENERATION OF DREAM BITER WILL BE HERE TO REPLACE YOUR POSITION.
+    -> Endings.endDying
+- else:
+    I can feel that my sanity is withering.{~ I was so close.| Did I just failed?| This doesn't feel very good.| I need to consume a dream soon, otherwise...}
+    -> Hunt_dream
+}
+
 
 
 === Eat_dream ===
@@ -182,11 +163,6 @@ From this <>
 -   3: {dream_C(1)}
 -   4: {dream_D(1)}
 -   5: {dream_E(1)}
--   6: {dream_F(1)}
--   7: {dream_G(1)}
--   8: {dream_H(1)}
--   9: {dream_I(1)}
--   10: {dream_J(1)}
 }<>'s dream, I suddenly {~ understand | comprehend | feel akin to the idea of} <>
 {LIST_VALUE(this):
 -   1: {dream_A(2)}
@@ -194,11 +170,6 @@ From this <>
 -   3: {dream_C(2)}
 -   4: {dream_D(2)}
 -   5: {dream_E(2)}
--   6: {dream_F(2)}
--   7: {dream_G(2)}
--   8: {dream_H(2)}
--   9: {dream_I(2)}
--   10: {dream_J(2)}
 }<>.
 
 -> Eat_dream
@@ -206,10 +177,9 @@ From this <>
 
 
 === Endings ===
-<>I have had enough of all this endless cycle. 
--> end1
+= endSubmitting
+I have had enough of all this endless cycle. 
 
-= end1
 *   [...] This has been my wish at the very beginning. I don't want to be the fuel of horrible dreams, like my predecessors.
     **  [...] And I have nothing of regret.
         *** [...]
@@ -222,7 +192,10 @@ CONSUME ME, please.
 # RESTART
 -> END
 
-=end2
+=endDying
+I did had some good dream visits://让玩家回忆之前经历的dream
+
+# RESTART
 -> END
 
 
