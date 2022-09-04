@@ -1,3 +1,6 @@
+INCLUDE Folder/mirrorDream.ink
+
+
 VAR dreamCount = 0
 VAR optionCount = 3
 VAR sanity = 10
