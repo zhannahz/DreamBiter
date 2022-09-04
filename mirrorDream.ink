@@ -17,6 +17,19 @@ Good.
 	-	(talkComplete1)I give up talking to him. -> begin
 	
 
+= look1
+Toward the window I navigate my unconvenient body around this crowded studio. This city looks appalling especially from such a huge window. Intense exposure to not only sunlight (only reflected from the other glass-covered buildings), but also the dusts rendered visible by the light. 
+Let me search for a point of interest. 
+-   (lookAtWindow)
++	The street []has the right amount of vehicles a city should have. But no one single human is driving any of them, nor does the sidewalks bear any passengers’ feet. -> lookAtWindow
++	A woman []is busy polishing her make-up at the northeastern direction to the apartment I am in, where the apartment she lives in is standing only one story below this one. 
+	**	She looks…[] normal. I don’t really know what counts as beautiful or ugly in human’s standard. She looks very even and symmetrical, and her skin color falls between a creamy brown and beige, if I have to come up with some descriptions. 
+	    *** (seeWomanCompleted) [Why?] Why only this woman appears in this dream, and only she looks different than the other moving humans?
+	    - I need to find other clues.
+	    -> begin
++	The sky []isn’t a sky at all! It is more of a dome of mirror capturing in entire city and its own reflection. -> lookAtWindow
+
+
 = talk2
 *	Approaching [one of the man…copy.] the one who seems to be arguing with another himself, uh, or the other copy. They noticed me when I failed to keep my sturdy feet from colliding with the bar stool at the Kitchen.
 	“Hey, you, stranger. You appears at the perfect moment. We are in a small trouble and need some help, will you?“
@@ -45,26 +58,34 @@ I waited for their reaction.
     "Can you help with me too?" The voice comes from a man sitting at the corner of the corridor, as if he was avoiding the crowd the whole time.
 }
 -   "Since you are such an observant figure, why not help me with other problem?"
-    *   "I will see what I can do." [] "Good. Listen to this: My friends and colleagues all call me a humble person, but why, why do I hate them so much?"
-        **  "You...hate them?" [] "Yes. I have a reputation of being always polite and humble. "
-            *** {mirrorCorrect}
-        -> DONE
+    *   "I will see what I can do." 
     *   "What a coincidence. I have a tons of questions for you too."
-        -> DONE
-    
-    
-= look1
-Toward the window I navigate my unconvenient body around this crowded studio. This city looks appalling especially from such a huge window. Intense exposure to not only sunlight (only reflected from the other glass-covered buildings), but also the dusts rendered visible by the light. 
-Let me search for a point of interest. 
--   (lookAtWindow)
-+	The street []has the right amount of vehicles a city should have. But no one single human is driving any of them, nor does the sidewalks bear any passengers’ feet. -> lookAtWindow
-+	A woman []is busy polishing her make-up at the northeastern direction to the apartment I am in, where the apartment she lives in is standing only one story below this one. 
-	**	She looks…[] normal. I don’t really know what counts as beautiful or ugly in human’s standard. She looks very even and symmetrical, and her skin color falls between a creamy brown and beige, if I have to come up with some descriptions. 
-	    *** (seeWomanCompleted) [Why?] Why only this woman appears in this dream, and only she looks different than the other moving humans?
-	    - I need to find other clues.
-	    -> begin
-+	The sky []isn’t a sky at all! It is more of a dome of mirror capturing in entire city and its own reflection. -> lookAtWindow
+    -   "Listen to this: My friends and colleagues all call me a humble person, but why, why do I hate them so much?"
+        **  "You...hate them?" [] "Yes. But thanks to them I have a reputation of being always polite and humble. "
+            *** [Is he just a misanthropic type?] "Because you just don't like them anyways?" -> endingFailure
+            
+            *** [Is there some underlying problems?]
+                [{seeWomanCompleted}] <>"Is the woman across the street one of them?" He didn't expect the question, and shakes his head.
+                **** [Does he not want that compliment?]"Then how does being called humbled again and again make you feel? You don't identify with that description, do you?" 
+                    "What...why do you say that?" 
+                    -> finalQuestion
+                        
+                -   (finalQuestion)
+                    "Becasue: you are in fact the opposite of a humble person. Being humble because a social performance.
+                    <> {seeWomanCompleted: That woman––you admires the woman who can look straight into her mirror while you don't even dare to put a mirror in your house. }
+                    <> {mirrorCorrect: For example, you hate duplication of yourself, because who you really are is a narccistic person, and yet you hate that narccistic aspect of yourself. }
+                    Do you see now?"
+                    -> endingSuccess
+                
+    -> DONE
+= endingFailure
+"You know nothing about me. Get out of here, dream eater. You think I don't know what you are?" His anger grows unexpectantly.
+-> END
 
-			
-			
--> DONE
+= endingSuccess
+"You might be...you ARE right." His face changes to a softer and yet less confident look. "And you are here to eat this horrible dream, right? Be quick. I want to be awake now and forget all this." 
+I hesitates for a moment, "And what would you do tomorrow?"
+"I don't know." He signs and seems to make a decision, "But neither should I keep myself here any longer."
+-> END
+
+
