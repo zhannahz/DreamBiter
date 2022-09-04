@@ -23,7 +23,7 @@ LIST visitedDreams = (none)
 
 LIST dream_A = (mirrorman), (ism)
 
-LIST dream_B = (dreamer_B), (ism)
+LIST dream_B = (roleplayer), (ism)
 
 LIST dream_C = (dreamer_C), (ism)
 
@@ -108,6 +108,7 @@ I am a dream biter, which I learnt as of today. -> becomingDreamBiter
 = dreamA
     This is a dream of a {LIST_MIN(dream_A)}.
     INCLUDE Dreams/mirrorDream
+
     {successRecorder !? successDreamA:
         -> Eat_dream
     -  else:
@@ -116,8 +117,13 @@ I am a dream biter, which I learnt as of today. -> becomingDreamBiter
     
 = dreamB
     This dream is about a {LIST_MIN(dream_B)}.
-    ...
-    -> Eat_dream
+    INCLUDE Dreams/roleplayDream
+    
+    {successRecorder !? successDreamB:
+        -> Eat_dream
+    -  else:
+        -> Lose_dream
+    }
 = dreamC
     This dream is about a {LIST_MIN(dream_C)}.
     ...

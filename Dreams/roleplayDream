@@ -1,0 +1,110 @@
+-> rolePlayDream
+
+=== rolePlayDream ===
+-> game1
+= game1
+Someone busted through the room but I couldn't tell how. Where I am seems to be an office building with an industrial furnishing style. That might come from sometime during humanity's Black Plague period. Across several police-looking humans who are apparently searching for something in great confusion, I am sitting on an extra soft armchair with wooden armrest. 
+-   (surrounding)
++   [Look down]
+    I apparently embody a human being this time. From the cloth and my position, I can tell this figure I play is an important one among the crowds. 
+    -> surrounding
++   [Look up]
+    The dim light barely lit up this luxious room. The ceiling chandelier is shaking a bit.
+    -> surrounding
++   [Look backward]
+    That "someone" left through the balcony at my back.
+    -> surrounding
+    
+-   "Officer, we lose track of the spy. The safe is stolen, our core document along with the golds are gone. " 
+*   [Ask if he is the dreamer]"Are you the one who is dreaming?" He immediately lowers his head and starts apologizing. Apparently, he has taken my line as reproach.
+*   [Walk away] Pondering on the situation, I believe the dreamer isn't one of the police force, and rather was the stealthy one who slips through the police force investigation.
+
+-   How do I find the dreamer?
+*   (haveGun) [Play along.] I pick up a gun and start searching. 
+*   [Shout into the air.] I face toward the direction where I believe the spy dreamer fleed and shouted: "Where are you? What's this for?"
+
+-   I hear a fuss at the floor above. But other polices remain idle with their dull eyes.
+*   [Rush upstair.] A thin and slightly hunchbacked silouette facing away from me just took down a police, who now becomes unconcious.
+    {haveGun:
+        **  (playAlong) [Shoot at the silouette.] "Damn." He seems the feel the shot but it didn't hurt as much as the fact that he fails at the game. "I know stealth game isn't my type. Next one." -> game2
+        **  [I am not using the gun.] "I am not playing along with you. Let's talk." He appears annoyed when I said I wouldn't follow his plan. The annoyance then morphs into some delight. He mutters to himself and starts laughing. ->game2
+    - else:
+        <> Before I do anything further, the silouette notices me and turns back. His eyes shinning with surprises and confusion: "Why did this one hear me? The guards should have very limited range of perception. Hmm...ah, that should be my type!"
+        **  "Because I am not one of them. I am not part of your imagined antogonists."
+            His mouth slightly opens and eyes narrowed in delight, "Let's play the next game! Now I have an actual antogonist. This should be fun!" -> game2
+    }
+    
+    
+= game2
+As he laughs, the world around me collapses and starts to reconfigure itself. The office building fades and I stands instead on a bare grass land. I lose track of the dreamer.
+My field of vision broaden, partly because of the environment, and partly because I am no longer playing a human.
+*   [What am I now?]
+    I am turned into some kind of dragon, the kind that is alwasy conceived with very limited imagination and preconception by humans.
+    **  If I am a dragon, who will the dreamer become?
+*   [Where is he?]
+
+-   "The arrogant Dragon of Thunderstorm, taste my blade and let me bury you at this peaceful land." It's the voice of a female. Sounds like a young woman and unlike the grown-up male voice before.
+-   (turn1) {!A girl with short straight white hairs} jumps {!down from the sky} and swing her unreasonably long straight sword toward me.
+    **  [{&Defense|Dodge}.] 
+        {~My claw is heavy and hard, defending the blade.->turn2|I am not used to this body, and have to take her attack.->turn1|This body is way too cumbersome, but I manage to shake my head away from the sword.->turn2|Her blade reaches me before I know.->turn1} 
+-   (turn2)
+-   "Slippery!" She lands on the ground with elegance and starts preparing another attack. Everything happen at the millisecond level. I need to do something.
+    **  [Shove her with my tail.]
+        {~I got her. And now she had to balance himself for a moment, which gives me a moment to say something.->turn3|She dodges away swiftly.->turn2}
+    **  [Summon a lightning that flies toward her.]
+        {~Too slow––she again<>->turn1|She is literally shocked and next freeze in the mid air.->turn3}
+    **  [Keep talking.] Although I still can't be certain which character is more akin to the dreamer's actual appearance, I know that they likes to role-play.
+        "Is this your wish, to embody the other? What do you want from living with another persona?" 
+
+-   (turn3)
+    "I...Who are you? I didn't invite you to be here,
+    {playAlong:
+        <> but you still play along with me. Thank you."
+    - else:
+        <> and you ruins my fun."
+    }
+    *   "It doesn't matter who I am."[] I continues, "What matters is who you want to be."
+        She surrenders, “Anyone as long as it is not me. Anyone who lives with a view different from my own.”
+        **  "Out of curiosity of the Other?"
+        **  "Because you don't like how you were?"
+        **  "And you are used to playing as another person?"
+        -   "I don't know. Maybe...I am tired. I don't..." Her voice faints and the world starts shifting again. ->game3
+    *   "I consum dreams for a living."[] I continues, "And yet understanding why you dream this particular dream is part of my duty as well."
+        "Is, is that why we all forget what we dreamed of the last night?"
+        **  Maybe.
+            "How convenient is it for you, eating away others' dreams. I don't mind though, personally."
+        **  Say nothing.
+            "Never mind. I bet you wouldn't know how it is like to live and think like a human."
+        -   "I...maybe I should give up role-playing. Those roles aren't me, right? But who am I anyways......" The world starts shifting––Another one?? ->game3
+
+= game3
+A 10*10 grid lies in front of me. Every few seconds, a piece of different color drops in a stable speed from the top to the bottom of the grid. Those items are in fact composed of cubes at the same size of a grid. When pieces of the same color fall adjacent to each other, the cubes that compose of them are crashed into powder and cleared at a straight line.
+I have no doubt about who I am. I am a player of this game this time. 
+-   (finalTurn)
+*   [Try talking.] "Are you among the pieces? What happens if you are cleared too?" I have a bad feeling about it. ->finalTurn
+*   [Observe.] This time there are no one else besides me. Are they among the pieces falling down? If so, which piece is it? ->finalTurn
+*   [Try preventing any piece from being cleared.] ->prevent
+*   [Try clearing the piece like how the game is supposed to work.] ->dreamfailed
+
+-   (prevent)
+"What do you want."
+*   [Continue preventing any piece from being cleared.]
+    "What do you want?"
+    "You think I am an addict, and only someone of self-contempt would want to role-play? You beleives that?"
+    **  [No.]
+        "That's the opposite of what I believes. We all are role-playing every second, in or out of our fantasy. Identities is exactly construed by the stories we experience and choices we make as we role-play." When I finished, I sense a brief time palse in the world.
+        -> dreamSuccess
+    **  [Yes.] ->dreamfailed
+*   [Try clearing the piece like how the game is supposed to work instead.] ->clearOut
+    
+- (clearOut) I am quite good at this game. And yet as a T-shape purple piece is cleared from the bottomline of the grid, the world blasts away with cheerful white light.
+
+= dreamfailed
+     I did it wrong. The world stops commodating me, and the next moment I am kicked out of the dream. -> DONE
+     
+= dreamSuccess
+~ successRecorder -= successDreamB
+    The mirage of the game disappears, and next the dreamer stands in front me as a 16-year-old-ish boy, I know I did it. He raises his semi-transparent arm, and stares at me with amazement. "Your kind is beautiful. Strange, but beautiful. Now, take my dream."
+    *   [Bite.] As I bite his arm, the rest of his body liquifies and flows into my stomach. -> DONE
+
+
