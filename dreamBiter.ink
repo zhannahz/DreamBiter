@@ -1,4 +1,4 @@
-INCLUDE Folder/mirrorDream.ink
+INCLUDE Dreams/mirrorDream
 
 
 VAR dreamCount = 0
