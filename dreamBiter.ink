@@ -6,7 +6,7 @@ VAR currentDream = ""
 LIST successRecorder =
     successDreamA,
     successDreamB,
-    successDreamc,
+    successDreamC,
     successDreamD,
     successDreamE,
     successDreamF
@@ -31,11 +31,6 @@ LIST dream_D = (dreamer_D), (ism)
 
 LIST dream_E = (dreamer_F), (ism)
 
-
--> testroom
-=== testroom ===
-
-
 -> Introduction
 === Introduction ===
 I am a dream biter, which I learnt as of today. -> becomingDreamBiter
@@ -53,7 +48,13 @@ I am a dream biter, which I learnt as of today. -> becomingDreamBiter
     //{dreamManager()}
 - else:
     I have finished all my duty. Now it is the time for me to put an end to this.
-    -> Endings.endSubmitting
+    {LIST_COUNT(successRecorder) == 0:
+        <>I wouldn't have believed I can successfully consumed all of those dreams.
+        -> Endings.endSubmitting
+    - else:
+        -> Endings.endSubmitting
+    }
+    
 }
 
 
@@ -188,20 +189,25 @@ Wait...I can no longer exit my duty, or this existence! Part of me is so deeply 
 The next dream biter––if there were one––hear my sorrow and please fulfill my wish: 
 
 CONSUME ME, please.
-
 # RESTART
 -> END
 
 =endDying
-I did had some good dream visits://让玩家回忆之前经历的dream
-
+I did had some good dream visits: 
+{dreamManager()}
 # RESTART
 -> END
 
 
 === function dreamManager
-    There are still {LIST_COUNT(allDreams)} dreams on my duty.
+    There are  
+    {LIST_COUNT(successRecorder) > 0:
+        <>still {LIST_COUNT(successRecorder)} dreams that I didn't help at all.
+    - else:
+        <>no dreams that I couldn't comprehend and consume.
+    }
     
+    //让玩家回忆之前经历的dream
 
 
 
