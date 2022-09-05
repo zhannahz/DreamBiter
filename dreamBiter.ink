@@ -11,10 +11,10 @@ VAR sanity = 10
 VAR currentDream = ""
 VAR lastDream = ""
 LIST successRecorder =
-    successDreamA,
-    successDreamB,
-    successDreamC,
-    successDreamD
+    (successDreamA),
+    (successDreamB),
+    (successDreamC),
+    (successDreamD)
 
 LIST allDreams = 
     (A), 
@@ -24,23 +24,28 @@ LIST allDreams =
 
 LIST visitedDreams = (none)
 
-LIST dream_A = (mirrorman)
+LIST dream_A = (mirrorman), (honesty)
 
-LIST dream_B = (roleplayer)
+LIST dream_B = (roleplayer), (identity)
 
-LIST dream_C = (student)
+LIST dream_C = (student), (manipulation)
 
-LIST dream_D = (sisyphus)
+LIST dream_D = (sisyphus), (sisyphean)
 
 
 -> Introduction
 === Introduction ===
-I am a dream biter, which I learnt as of today. 
+That human called Descarte was right––There is no deception of any form in dreams. My ancestry is a dream biter, and they know it well.
+At the last moment before a dream biter dies, they give birth to the predecessor and delivers all knowledge possible. And I am born this moment.
+They told me this: For endless ages, our kind's mission is to patrol the manifold plateau of dreams––a marvelous creation of the human brain––and eat them.
+While humans call a dream good or bad, wanted or undesirable, and yet for our kind, we have no ethical judgement about our food. 
 
--> becomingDreamBiter
+    -> becomingDreamBiter
 
 = becomingDreamBiter
-* [Accept the duty.] I accept the duty of a dream biter, but not the fate of it. -> Hunt_dream
+* [Embark on fulfilling my duty.] 
+    YOUR SANITY LEVEL IS FULL (10).
+    -> Hunt_dream
 
 
 
@@ -173,6 +178,8 @@ YOUR SANITY LEVEL DECREASE TO {sanity}.
 ~ sanity += 3
 YOUR SANITY LEVEL RESTORE TO {sanity}.
 
+-> choose
+= choose
 +   [Go on to the next dream] 
     -> Hunt_dream
 +   [Ruminate the dream I just ate] 
@@ -190,41 +197,37 @@ From this <>
 -   3: {dream_C(1)}
 -   4: {dream_D(1)}
 
-}<>'s dream, I suddenly {~ understand | comprehend | feel akin to the idea of} <>
+}<>'s dream, I suddenly {~ gain more curiosity about the concept | feel I just saw the concretization of the idea of} "<>
 {LIST_VALUE(this):
 -   1: {dream_A(2)}
 -   2: {dream_B(2)}
 -   3: {dream_C(2)}
 -   4: {dream_D(2)}
 
-}<>.
+}<>".
 
--> Eat_dream
+-> Eat_dream.choose
 
 
 
 === Endings ===
 = endSubmitting
-I have had enough of all this endless cycle. 
-
-*   [...] This has been my wish at the very beginning. I don't want to be the fuel of horrible dreams, like my predecessors.
-    **  [...] And I have nothing of regret.
-        *** [...]
-            **** [...?]
-Wait...I can no longer exit my duty, or this existence! Part of me is so deeply embedded in my own horrible dream. Who can help me? Who can kill me at justice?
-The next dream biter––if there were one––hear my sorrow and please fulfill my wish: 
-
-CONSUME ME, please.
-# RESTART
--> END
+Is this is the end? Am I turning into a haunted dream?
+*   [...] I didn't have a choice. And I knew it from the beginning.
+    **  [...] But those dreams––are really good food. I had some good nights: {dreamManager()}
+        *** [...] The next dream biter––if there were one––hear my sorrow and please fulfill my wish: 
+            CONSUME ME, please.
+            # RESTART
+            -> END
 
 =endDying
-I did had some good dream visits: 
-{dreamManager()}
+Now here I am, dying due to underachieveness
+But who says this is neccessarily worse? {dreamManager()}
+Still, I tried.
+The rest of our kind's duty, however, should be carried on: 
+*   [Give birth to the next generation.] "My child, let me tell you: you are a dream biter."
 # RESTART
 -> END
-
-
 
 === function dreamManager
     There are  

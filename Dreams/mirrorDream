@@ -65,30 +65,35 @@ I waited for their reaction.
         **  "You...hate them?" [] "Yes. But thanks to them I have a reputation of being always polite and humble. "
             *** [Is he just a misanthropic type?] "Because you just don't like them anyways?" -> endingFailure
             
-            *** [Is there some underlying problems?]
-                **** {seeWomanCompleted} "Is the woman across the street one of them?"[]He didn't expect the question, and shakes his head. -> notHumble
-                -   (notHumble)
-                **** [Does he not want that compliment?]"Then how does being called humbled again and again make you feel? You don't identify with that description, do you?" 
-                    "What...why do you say that?" 
-                    -> finalQuestion
+            *** [Is there some underlying problems?] ->finalQuestion
+    
                         
 = finalQuestion
-"Becasue: you are in fact the opposite of a humble person. Being humble because a social performance.
-<> {seeWomanCompleted: That woman––you admires the woman who can look straight into her mirror while you don't even dare to put a mirror in your house. }
-<> {mirrorCorrect: For example, you hate duplication of yourself, because who you really are is a narccistic person, and yet you hate that narccistic aspect of yourself. }
-Do you see now?"
--> endingSuccess
+{seeWomanCompleted: 
+    "Is the woman across the street one of them?" He didn't expect the question, and shakes his head. ->reveal
+- else:
+     ->reveal
+}
+
+-   (reveal)
+*   [Does he not want that compliment?]"Then how does being called humbled again and again make you feel? You don't identify with that description, do you?" I asked.
+    "What...why do you say that?" 
+    **  [Summerize your observation]"Becasue: you are in fact the opposite of a humble person. Being humble because a social performance.
+    <> {seeWomanCompleted: (I think of that woman.) That woman––you admires the woman who can look straight into her mirror while you don't even dare to put a mirror in your house. }
+    <> {mirrorCorrect: (I recall the argument about mirrors.) For example, you hate duplication of yourself, because who you really are is a narccistic person, and yet you hate that narccistic aspect of yourself. }
+    Do you see now?"
+    -> endingSuccess
                 
-    -> DONE
 = endingFailure
 "You know nothing about me. Get out of here, dream eater. You think I don't know what you are?" His anger grows unexpectantly.
--> END
+-> Enter_badDream.dreamAEnd
 
 = endingSuccess
 ~ successRecorder -= successDreamA
 "You might be...you ARE right." His face changes to a softer and yet less confident look. "And you are here to eat this horrible dream, right? Be quick. I want to be awake now and forget all this." 
 I hesitates for a moment, "And what would you do tomorrow?"
 "I don't know." He signs and seems to make a decision, "But neither should I keep myself here any longer."
--> END
+After leaving me an inconclusive answer, he disappears, leaving a swirl of energy that I am familiar with. I knew I did it.
+-> Enter_badDream.dreamAEnd
 
 
