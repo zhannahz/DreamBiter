@@ -1,145 +1,146 @@
 === bombDream ===
-The anxious murmuring in the classroom wakes me up from my nap. 
-I always have a nap during the morning the class. I can't sleep well in home. Most people looks frightened, while some are excited.
+#Author: JunZhou
+I hope this time I'll encounter something cheerful and light-hearted, like the kind of fly-through-sky dream children sometimes have. But we don't judge on dreams, we try our best to tame them.
+I fall into a defensive body...
+"whjwnksjhfjsf&^bjbfd%723nkjdjcfhb...@@@@hjewbf$%"
++[What is the sound? So annoying.]->start
+= start
+The anxious murmuring in the classroom wakes me up from my nap. I always have a nap during the morning the class. I can't sleep well in home. Most people looks frightened, while some are excited.
 "What...just happened?" I turn my head to Y, the only girl in the class who would talk to me patiently. Y is sobbing quietly.
-"Check your phone."Y says without looking at me.
 
-*   [Check my phone]
++ "Check your phone."Y says without looking at me.
     -> Check_phone
     
 = Check_phone
 I open my phone and see a message alert jumping out at the top of my screen.
 It says:
-"I'm glad to announce that I hide a bomb within this campus, it would blow up bt 12 P.M. Good luck everyone."
-*   [What time it is now?] My phone shows it's 11:30.
--   I froze. Some hidden part of my brain started to creep toward somewhere I can't tell.
--> disperse
+"I'm glad to announce that I hided a bomb within this campus, it would blow up bt 12 P.M. Good luck everyone."
+*   12 P.M.. What time it is now?
+    My phone shows it's 11:30.
+    **I froze.->disperse
++   I froze. 
+    Some hidden part of my brain started to creep toward somewhere I can't tell.->disperse
 
 = disperse
-*   [Look around.]
-    The teachers are arranging student evacuation, police will also come soon to search for the bomb. People in class just can't stop talking ever since they received the message, like they won a lottery or something. 
-    I sigh, putting my text books into my bag. Suddenly, my deck shakes a little bit, and my pen falls to the floor. 
-    **  [Pick up the pen] I look up and see K walking pass me. K looks much taller than usual for some unknown reason.
-    -   "Oops. Sorry." He says without look at me as well. 
-    NO ONE LOOKS AT ME.
-*   Confront him with words.[] "You seem happy." ->withk
+# IMAGE: Images/bomb/classroom.png
+The teachers are arranging student evacuation, police will also come soon to search for the bomb. People in class just can't stop talking ever since they received the message, like they won a lottery or something. I sigh, putting my text books into my bag. Suddenly my deck shakes a little bit, and my pen falls to the floor. I look up and see J walking pass me. J looks much taller than usual.
+"Oops. Sorry." He says without looking at me as well. NO ONE LOOKS AT ME.
+
++   "You seem happy."->withk
 
 = withk
 He frowns because he doesn't like me talking back to his provocative acts.
-"Look, I guess you are satisfied now with everyone of us are facing a life threatening situation, right? You don't like us and you even never hide it. If anythone is harmed, I'll count it on you. We'll see." 
-While he speaks, everyone looks at me as if I'm the maniac. 
-*   NO ONE LOOKS AT ME[] EXCEPT WHEN EVERYONE LOOKS AT ME. I'M GUILTY FOR MY EXISTENCE BY THEIR STARES.
-    **  ["Just why you have to behave like this?"] -> why
-    **  Give up talking. []He's so gross, I hear myself mumuring in my head. -> disperse2
-
+"Look, I guess you are satisfied now with everyone of us are facing a life threatening situation, right? You don't like us and you even never hide it. If anythone is harmed, I'll count it on you. We'll see." While he speaks, everyone looks at me as if I'm the maniac. NO ONE LOOKS AT ME EXCEPT WHEN EVERYONE LOOKS AT ME.I'M GUILTY FOR MY EXISTENCE.
++   "Just why you have to behave like this?"-> why
++   He's so gross. -> disperse2
 = why
-He giggles like a devil sharpening his knife.
+He giggles, which sounds like a devil sharpening his knife.
 "A paranoia doesn't deserve my answer."
-Yeah, I know what he means by "paranoid". There's a period of my life in which I am extremely nervous and think people will just punish and humiliate me, like my mother does.
-My therapist says....Guess what? I don't even have a therapist because my mom always says the best therapy is the care from family––or to be more accurate––from her selfless perverted love.
-*   [Remain silence.] ->disperse2
+*   Paranoia? Who? Me?
+    Oh, I know what he means by "paranoid". There's a period of my life in which I am extremely nervous and think people will just punish and humiliate me, like my mother does.
+    My therapist says....Guess what? I don't even have a therapist because my mom always says the best therapy is the care from family, to be more accurate, from her selfless perverted love.
+    **  [Say nothing.]->disperse2
++   [Say nothing.] ->disperse2
 
-=== disperse2 ===
-I stop thinking about him, pack my stuff without a word and walk out of the classroom. It's actually a relief to escape from school, no matter there's really a bomb or not. My phone vibrates within my coat pocket.
+= disperse2
+I stop thinking about him, pack my things silently and walk out of the classroom. It's actually a relief to escape from school, no matter there's really a bomb or not. My phone vibrates within my coat pocket.
 I know it's from my mom.
-*   [Check.]    -> Message
-*   [Ignore.]   ->Discover
-
-=== Message ===
++[Check.]-> Message
++[Ignore.]->Discover
+= Message
 "There's a bomb in your school. Get out of the classroom right now and send me a location share. I would like to see you in home within 20 minutes."
-*   [Reply "Okay mom."] -> Reply1
-*   [Reply "I can take care of myself."]    -> Reply2
-*   [Ignore.]   ->Discover
-
-=== Reply1 ===
++[Reply"Okay mom."]-> Reply1
++[Reply"I can take care of myself."]-> Reply2
++[Ignore.]->Discover
+= Reply1
 "Okay mom."
 "20 minutes. Don't forget to send me location share and you'll be grounded this week if you are late. Pay attention to the cars on street."
-*   [I feel] I can barely stand this anymore, yet I say nothing. I'm only her pet.   ->Discover
-=== Reply2 ===
++I can barely stand this anymore, yet I say nothing.I'm only her pet.->Discover
+= Reply2
 "I can take care of myself."
 "SEND ME LOCATION SHARE RIGHT NOW. Or else I'll call the police to grab you home. We'll talk about your attitude today."
-*   My mind is buzzing[]: MOTHER KILLS ME MOTHER KILLS ME MOTHER KILLS ME AGAIN... I need to calm down.
-    ->Discover
-    
-=== Discover ===
-I'm going home. 
-In the flood of chattering, someone says:“I bet she know where the bomb is. She looks like a serial killer." Then multiple people chuckle. I don't even need to see who they are. I'm numbed by all the things, all the murmurings that tries to wound me. Their are malicious grey shadows lurking in the wetland of my juvenile trauma. 
-"The bomb is at...." A voice grows from the deep of my mind suddenly, slow and coarse as a snake crawling on sand. 
-"At where?" I murmur unconsciously.
-"At the flower shrubs in the midde of the grassland...Where you got the scar on your left arm from respectful K." The voice responds in a cold, wry way.
-*   [Shiver] I shiver. -> Choice1
++MOTHER KILLS ME MOTHER KILLS ME MOTHER KILLS ME AGAIN... I need to calm down.->Discover
+= Discover
+I'm going to go home. 
+
+*   But people are ignited by the little argument I had with J.
+In the flood of chattering, someone says:“I bet she know where the bomb is. She looks like a serial killer." Then multiple people chuckle. I don't even need to see who they are. I'm numbed by all the things that tries to wound me. Their are malicious grey shadows lurking in the wetland of my juvenile trauma. 
+    **It's okay. I can lock myself up as always. 
+    "The bomb is at...." A voice grows from the deep of my mind suddenly, slow and coarse as a snake crawling on sand. 
+    "At where?" I murmur unconsciously.
+    "At the flower shrubs in the midde of the grassland...Where you got the scar on your left arm from respectful J." The voice responds in a cold, wry way.
+        ***[I shiver.]-> Choice1
 = Choice1
+# IMAGE: Images/bomb/flower.png
 What should I do?
-*   [Report to the school, I want people to see me as a hero.] I report to the school. -> branch1
-*   [Don't report to the school, I don't want people to think I'm paranoid.] I didn't report to the school in case people think I am paranoid. ->branch2
-*   [Don't report to the school, better they never find it and everyone dies.] I didn't report to the school, hoping that message was a real thing. ->branch3
++Report to school, I want people to see me as a hero.-> branch1
++Don't report to school, I don't want people to think I'm paranoid.->branch2
++Don't report to school, better they never find it and everyone dies.->branch3
 
 = branch1
 Yeah....but would they? From my past experience it is more likely for them to see me as the bomber's accomplice.I'd better hide it from people.
 Yet...I'm very curious about the source of the voice.
-
-*   [Ponder on the voice.]
-    -> branch2
-
++[Think about the voice.]
+-> branch2
 = branch2
-Just why...that voice sounds like a non-human creature yet super familiar to me.The double image of a peeping eye.
+Just why...The voice sounds like a non-human creature yet super familiar to me.The double image of a peeping eye.
 I need to figure it out. 
-*   [Dive deep in my mind.]
-    -> Choice2
-
++[Dive deep in my mind.]-> Choice2
 = branch3
-Yeah they definitey deserve to die... Except Y, who at least talks to me...and several teachers... though they pitiy me which makes me feel pathetic...
-*   I might need to reconsider.
-    -> branch2
-
+Yeah they definitey deserve to die... Except Y, who at least talks to me...and several teachers... though their pities makes me feel pathetic...
++I might need to reconsider.-> branch2
 = Choice2
 I press on my forehead with my sweating cold hand to help me recalling things. My head aches so often that I can't remember things too well.
 I heard the sound because...
-*   [I've talked with suspicious people hanging around]-> branch21
-*   [I heard the bomber's murmuring at somewhere.]->branch22
-*   [I'm more paranoid than I would admit and I imagined the voice.]->branch23
-
++I've talked with suspicious people hanging around. -> branch21
++I heard the bomber's murmuring at somewhere. ->branch22
++I'm more paranoid than I would admit and I imagined the voice. ->branch23
 = branch21
 Did I? I hardly ever go to there anymore...after that terrible memory...maybe something else.
-*   Maybe the voice is my own creature.->branch23
-
++Maybe the voice is my own creature.->branch23
 = branch22
 If I had heard a voice like that I would definitely remembered...
-*   Maybe the voice is my own creature.->branch23
-
-= branch23
++Maybe the voice is my own creature.->branch23
+=branch23
 Haha...It seems the most reasonable answer...When I was a child I always imagine there is a devil following me, trying to devour me, and it might just sounds like that voice. 
-Maybe K is correct, I'm a resentful paranoid nut. Maybe I am the bomber! This thought somehow made me smile, but a bitter and painful one. I totally lose control of my life, my memory, and my emotions. An ant can live with more dignity.
-*   I decide to see if there's really a bomb. -> Choice3p1
-
+Maybe K is correct, I'm a resentful paranoid nut. 
+*   Maybe I am the bomber! 
+    This thought somehow made me smile, but a bitter one.
+    **I decide to see if there's really a bomb. 
+-> Choice3p1
++I decide to see if there's really a bomb. 
+-> Choice3p1
 = Choice3p1
-The grassland is peaceful as students all go back to home. I walk toward the flower shrub, which takes me a century to achieve. At first I walk slowly, then I speed up, and finally I start to run. The peaceful grassland turns into a void that absord me into the center.
+The grassland is peaceful as students all go back to home. I walk toward the flower shrub, which takes me a century to achieve. At first I walk slowly, then I speed up, and finally I start to run. The peaceful grassland turns into a void that absords me into the center.
 I finally reach the flowers. Tranquil, fresh flowers in full bloom.
-*   [Check the bomb.]-> Choice3p2
-
++[Check the bomb.]-> Choice3p2
 = Choice3p2
-The bomb is there, and I don't know whether it relieves me or stresses me. I froze again as my brain stops processing things anymore. My phone rings, it's my mom. I don't pick it up because I notice the time. It's 11:58. It seems my fate wants me to end here.
-*   [Try to break apart the bomb.]  -> End1
-*   [Call mom and tell her I love her.] ->End2
-*   [Talk with the voice in my head.]   ->End3
 
+The bomb is there, and I don't know whether it relieves me or stresses me. I froze again as my brain stops processing things anymore. My phone rings, it's my mom. I don't pick it up because I notice the time. It's 11:58. It seems my fate wants me to end here.
++[Try to break apart the bomb.]-> End1
++[Call mom and tell her I love her.]->End2
++[Talk with the voice in my head.]->End3
 = End1
 The bomb is a complicated object and I have no idea where to start. I can only rely on my luck.
-Mu luck always sucks in my entire life. 
-When the bomb start to blow,my skin and flesh are heated to such an extreme that I want to vanish. I opened my mouth and fire injected out of it. This is the end.My body cramps. I turn into the devastating power of heat with the urge to annihilate things.  -> Enter_badDream.dreamCEnd
-
-= End2
+My luck always sucks in my entire life. 
+When the bomb start to blow,my skin and flesh are heated to such an extreme that I want to vanish. I opened my mouth and fire injected out of it. This is the end.My body cramps. I turn into the devastating power of heat with the urge to annihilate things.
+*   The state of range and despair almost takes away my consciousness.
+    The dream kicks me out. It is so saturated with the dreamer's emotions that I can't breath inside. I failed this time.  -> Enter_badDream.dreamCEnd
+    
+===End2===
 I call back to mom.
-"Where are you?You are driving me crazy. I bet you go to that stupid park again after school right? I'm such a miserable person to have you as my only child.If you don't come home within 10 minutes I'd rather that bomb kills you. I just can't believe you ignore what I told you......"
-I hang up the phone. It doesn't matter when the bomb blows, I am already half-dead.  -> Enter_badDream.dreamCEnd
-
-= End3
-~ successRecorder -= successDreamC
-"Just...can you explain all the things to me, no matter what you are?"
+"Where are you?You are driving me crazy. I bet you go to that stupid park again after school right? I'm such a miserable person to have you as my only child.If you don't come home within 10 minutes I'd rather that bomb kills you. I just can't believe you ignored what I told you......"
+I hang up the phone. 
+*It doesn't matter when the bomb blows, I am already half-dead.
+I run out of the dream as the despair that soon spreads all over the dreamer's body is suffocating me. Such dreams cannot be consumed anymore.I failed. -> Enter_badDream.dreamCEnd
+===End3===
+ ~ successRecorder -= successDreamC
+"Just...can you explain all the things to me, no matter what you are?" I ask that voice in the ast moment of my life.
 "I am you and I am not you. I am part of you that you are not even aware of. I am your death, your shadow, your lost paradise."
-"But why...I have to go through all these?"
-"Because you don't believe the world. People build their worlds upon their family, their inner personality, their connections with the others, etc. But you don't have support from each of those things. You just don't. For you, things will come to an end eventually."
-"You mean...I am doomed to death?"
-"It might be a bless, don't you think so? At least you choose you own path. Now, let's stop wasting time and enjoy the firework show."
-And then comes the most beautiful light I have ever seen. Warm, tender and bright. -> Enter_badDream.dreamCEnd
+*   "But why...I have to go through all these?"
+    "Because you don't believe the world. People build their worlds upon their family, their inner personality, their connections with the others, etc. But you don't have support from each of those things. For you, things will come to an end eventually."
+    **"You mean...I am doomed to death?"
+        "It might be a bless, don't you think so? At least you choose you own path. Now, let's stop wasting time and enjoy the firework show."
+        ***And then comes the most beautiful light I have ever seen. Warm, tender and bright.
+            I slipped out of the dream like recovering from a fatal disease. From the warm current running inside my body I can tell I success this time. -> Enter_badDream.dreamCEnd
 

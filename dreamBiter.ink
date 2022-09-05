@@ -4,7 +4,7 @@
 INCLUDE Dreams/mirrorDream
 INCLUDE Dreams/roleplayDream
 INCLUDE Dreams/bombDream
-
+INCLUDE Dreams/sisypheanDream
 
 VAR dreamCount = 0
 VAR optionCount = 2
@@ -36,11 +36,14 @@ LIST dream_D = (sisyphus), (sisyphean)
 
 -> Introduction
 === Introduction ===
-That human called Descarte was right––There is no deception of any form in dreams. My ancestry is a dream biter, and they know it well.
+
+(*PLAYER READ ME: SAVE and LOAD at the right top corner of this page are your friends.)
+
+That human called Descartes was right––There is no deception of any form in dreams. My ancestry is a dream biter, and they know it well.
     #IMAGE: Images/biter/biterImage1.jpg 
 At the last moment before a dream biter dies, they give birth to the predecessor and delivers all knowledge possible. And I am born this moment.
 They told me this: For endless ages, our kind's mission is to patrol the manifold plateau of dreams––a marvelous creation of the human brain––and eat them.
-While humans call a dream good or bad, wanted or undesirable, and yet for our kind, we have no ethical judgement about our food. (*PRESS RESTART HERE IF AN OPTION IS MISSING; WE ARE SORRY ABOUT THAT.) -> becomingDreamBiter
+While humans call a dream good or bad, wanted or undesirable, and yet for our kind, we have no ethical judgement about our food.  -> becomingDreamBiter
 
 = becomingDreamBiter
 * [Embark on fulfilling my duty.] 
@@ -50,7 +53,7 @@ While humans call a dream good or bad, wanted or undesirable, and yet for our ki
 
 
 === Hunt_dream ===
-~ optionCount = 3
+~ optionCount = 2
 
 
 { LIST_COUNT(visitedDreams) < 5:
@@ -59,16 +62,16 @@ While humans call a dream good or bad, wanted or undesirable, and yet for our ki
         At this moment, a far voice slips into my mind. It is a word left by my gone ancestry:
         "My child. Congratulations. And yet I have a bad news to deliver."
         "Each and eveyone of our kind would end in either of two ways: perished out of lack of food, or have eaten enough dreams to become one. Choose one out of the two as you go. Best wishes."
-        # CLEAR
+        
         I haven't had the time to digest the meaning of this message because it is the time again.
     }
     { LIST_COUNT(visitedDreams) == 4:
         I have encountered 3 dreams, and very close to fulfilling my duty. And that means......
         As my ancestry told me, that means submitting myself to be a haunted dream, like all of my previous generations. What should I do...?
-        # CLEAR
+        
         I shake away those thoughts because it is the time again.
     }
-    #CELAR
+    
     {~I will never get used to this| Ok, I can do this| Let's go}
     ––Closing my eye, I can sense multiple source of mystery. These sources are dreams exhaled from a dreamer.
     
@@ -110,7 +113,7 @@ While humans call a dream good or bad, wanted or undesirable, and yet for our ki
     + {oneDream==A} [A dream about a humble man.]-> choose(oneDream)
     + {oneDream==B} [A dream about a role-player.]-> choose(oneDream)
     + {oneDream==C} [A dream about a student.]-> choose(oneDream)
-    + {oneDream==D} [A dream about a Sisyphus man.]-> choose(oneDream)
+    + {oneDream==D} [A dream about Sisyphus.]-> choose(oneDream)
 
     
 - else:
@@ -121,7 +124,7 @@ While humans call a dream good or bad, wanted or undesirable, and yet for our ki
 // redirect to the chosen dream
 = choose(chosenDream)
 ~ lastDream = chosenDream
-I{~ walk into | step into | jump into} it {~ without hesitation| having no idea what's awaiting}. #CLEAR
+I {~ walk into | step into | jump into} it {~ without hesitation| having no idea what's awaiting}. #CLEAR
 ~ visitedDreams += chosenDream
 
 {LIST_VALUE(chosenDream) == 1: -> Enter_badDream.dreamA } 
@@ -170,9 +173,15 @@ I{~ walk into | step into | jump into} it {~ without hesitation| having no idea 
     }
     
 = dreamD
-    ~ successRecorder -= successDreamD
-    this dream isn't completed durig the jam.
-    -> Eat_dream
+   
+    -> sisypheanDream
+    
+= dreamDEnd
+    {successRecorder !? successDreamD:
+        -> Eat_dream
+    -  else:
+        -> Lose_dream
+    }
 
 
 
@@ -249,7 +258,7 @@ The rest of our kind's duty, however, should be carried on:
 === function dreamManager
     There are  
     {LIST_COUNT(successRecorder) > 0:
-        <>still {LIST_COUNT(successRecorder)} dreams that I didn't help at all.
+        <> still {LIST_COUNT(successRecorder)} dreams that I didn't help at all.
     - else:
         <>no dreams that I couldn't comprehend and consume.
     }
