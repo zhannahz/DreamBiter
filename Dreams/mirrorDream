@@ -40,13 +40,15 @@ Let me search for a point of interest.
 	    ***	[Ask them why it is the mirror.] “Well, first of all: why do you want a mirror,” (I look around and confirm that there is no mirror decorated in the house at the moment.) “if you are doing good without one so far?” 
 	        -> mirror
     	+++ [Sure. Why not add a mirror.] "What’s so strange about having a mirror? It adds convenience to all of your lives. 
-    	    -> talk3
-    	+++ (mirrorCorrect) [A mirror is not a good idea for them.] "I agree with the...this gentleman who doesn't like the mirror idea," I continued with their gazes, "You see, the last thing you need is to over-contemplate on yourself anymore. I am talking about you, the host of the house, the dreamer." I look around, and see one of the identical men raises his head, as if just gotten a knock on his head. 
-    	    -> talk3
+    	    -> talk3 
+    	+++ (mirrorCorrect) [A mirror is not a good idea for them.] "I agree with the...this gentleman who doesn't like the mirror idea." 
+    	    I continued with their gazes, "You see, the last thing you need is to over-contemplate on yourself anymore. I am talking about you, the host of the house, the dreamer." 
+    	    I look around, and see one of the identical men raises his head, as if just gotten a knock on his head. -> talk3 
     	
     -> begin
     
 = talk3
+#CLEAR
 I waited for their reaction. 
 
 {mirrorCorrect: 
@@ -64,17 +66,18 @@ I waited for their reaction.
             *** [Is he just a misanthropic type?] "Because you just don't like them anyways?" -> endingFailure
             
             *** [Is there some underlying problems?]
-                [{seeWomanCompleted}] <>"Is the woman across the street one of them?" He didn't expect the question, and shakes his head.
+                **** {seeWomanCompleted} "Is the woman across the street one of them?"[]He didn't expect the question, and shakes his head. -> notHumble
+                -   (notHumble)
                 **** [Does he not want that compliment?]"Then how does being called humbled again and again make you feel? You don't identify with that description, do you?" 
                     "What...why do you say that?" 
                     -> finalQuestion
                         
-                -   (finalQuestion)
-                    "Becasue: you are in fact the opposite of a humble person. Being humble because a social performance.
-                    <> {seeWomanCompleted: That woman––you admires the woman who can look straight into her mirror while you don't even dare to put a mirror in your house. }
-                    <> {mirrorCorrect: For example, you hate duplication of yourself, because who you really are is a narccistic person, and yet you hate that narccistic aspect of yourself. }
-                    Do you see now?"
-                    -> endingSuccess
+= finalQuestion
+"Becasue: you are in fact the opposite of a humble person. Being humble because a social performance.
+<> {seeWomanCompleted: That woman––you admires the woman who can look straight into her mirror while you don't even dare to put a mirror in your house. }
+<> {mirrorCorrect: For example, you hate duplication of yourself, because who you really are is a narccistic person, and yet you hate that narccistic aspect of yourself. }
+Do you see now?"
+-> endingSuccess
                 
     -> DONE
 = endingFailure
