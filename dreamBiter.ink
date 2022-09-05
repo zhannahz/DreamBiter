@@ -1,6 +1,10 @@
 # author: AngelCui, JunZhou, HannahZeng
 # theme: dark
 
+INCLUDE Dreams/mirrorDream
+INCLUDE Dreams/roleplayDream
+INCLUDE Dreams/bombDream
+
 VAR dreamCount = 0
 VAR optionCount = 2
 VAR sanity = 10
@@ -80,8 +84,12 @@ I am a dream biter, which I learnt as of today.
 = option(oneDream) 
 { visitedDreams !? oneDream:
     ~ optionCount--
-    + [{oneDream}] I{~ walk into | step into | jump into} {oneDream} {~ without hesitation| having no idea what's awaiting}. #CLEAR
-    -> choose(oneDream)
+    + {oneDream==A} [A dream about a humble man.]-> choose(oneDream)
+    + {oneDream==B} [A dream about a role-player.]-> choose(oneDream)
+    + {oneDream==C} [A dream about a student.]-> choose(oneDream)
+    + {oneDream==D} [A dream about a Sisyphus man.]-> choose(oneDream)
+
+    
 - else:
     -> DONE
 }
@@ -89,6 +97,7 @@ I am a dream biter, which I learnt as of today.
 
 // redirect to the chosen dream
 = choose(chosenDream)
+I{~ walk into | step into | jump into} it {~ without hesitation| having no idea what's awaiting}. #CLEAR
 ~ visitedDreams += chosenDream
 
 {LIST_VALUE(chosenDream) == 1: -> Enter_badDream.dreamA } 
@@ -104,9 +113,9 @@ I am a dream biter, which I learnt as of today.
 
 === Enter_badDream ===
 = dreamA
-    This is a dream of a {LIST_MIN(dream_A)}.
-    INCLUDE Dreams/mirrorDream
 
+    -> mirrorDream
+    
     {successRecorder !? successDreamA:
         -> Eat_dream
     -  else:
@@ -114,9 +123,9 @@ I am a dream biter, which I learnt as of today.
     }
     
 = dreamB
-    This dream is about a {LIST_MIN(dream_B)}.
-    INCLUDE Dreams/roleplayDream
 
+    -> rolePlayDream
+    
     {successRecorder !? successDreamB:
         -> Eat_dream
     -  else:
@@ -124,8 +133,8 @@ I am a dream biter, which I learnt as of today.
     }
     
 = dreamC
-    This dream is about a {LIST_MIN(dream_C)}.
-    INCLUDE Dreams/bombDream
+
+    -> bombDream
     
     {successRecorder !? successDreamC:
         -> Eat_dream
@@ -134,7 +143,7 @@ I am a dream biter, which I learnt as of today.
     }
     
 = dreamD
-    This dream is about a {LIST_MIN(dream_D)}.
+
     ...
     -> Eat_dream
 

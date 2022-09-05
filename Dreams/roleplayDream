@@ -1,21 +1,27 @@
--> rolePlayDream
-
 === rolePlayDream ===
 -> game1
 = game1
 Someone busted through the room but I couldn't tell how. Where I am seems to be an office building with an industrial furnishing style. That might come from sometime during humanity's Black Plague period. Across several police-looking humans who are apparently searching for something in great confusion, I am sitting on an extra soft armchair with wooden armrest. 
 -   (surrounding)
-+   [Look down]
+
+*   [Look down]
     I apparently embody a human being this time. From the cloth and my position, I can tell this figure I play is an important one among the crowds. 
     -> surrounding
-+   [Look up]
+    
+*   [Look up]
     The dim light barely lit up this luxious room. The ceiling chandelier is shaking a bit.
     -> surrounding
-+   [Look backward]
+    
+*   [Look backward]
     That "someone" left through the balcony at my back.
     -> surrounding
     
--   "Officer, we lose track of the spy. The safe is stolen, our core document along with the golds are gone. " 
+*   -> 
+    ->begin
+    
+-   (begin)
+
+A policeman approaches me. "Officer, we lose track of the spy. The safe is stolen, our core document along with the golds are gone. " 
 *   [Ask if he is the dreamer]"Are you the one who is dreaming?" He immediately lowers his head and starts apologizing. Apparently, he has taken my line as reproach.
 *   [Walk away] Pondering on the situation, I believe the dreamer isn't one of the police force, and rather was the stealthy one who slips through the police force investigation.
 
@@ -26,7 +32,9 @@ Someone busted through the room but I couldn't tell how. Where I am seems to be 
 -   I hear a fuss at the floor above. But other polices remain idle with their dull eyes.
 *   [Rush upstair.] A thin and slightly hunchbacked silouette facing away from me just took down a police, who now becomes unconcious.
     {haveGun:
-        **  (playAlong) [Shoot at the silouette.] "Damn." He seems the feel the shot but it didn't hurt as much as the fact that he fails at the game. "I know stealth game isn't my type. Next one." -> game2
+        **  (playAlong) [Shoot at the silouette.] "Damn." He seems the feel the shot but it didn't hurt as much as the fact that he fails at the game. 
+            "I know stealth game isn't my type. Next one." 
+            -> game2
         **  [I am not using the gun.] "I am not playing along with you. Let's talk." He appears annoyed when I said I wouldn't follow his plan. The annoyance then morphs into some delight. He mutters to himself and starts laughing. ->game2
     - else:
         <> Before I do anything further, the silouette notices me and turns back. His eyes shinning with surprises and confusion: "Why did this one hear me? The guards should have very limited range of perception. Hmm...ah, that should be my type!"
@@ -37,7 +45,7 @@ Someone busted through the room but I couldn't tell how. Where I am seems to be 
     
 = game2
 As he laughs, the world around me collapses and starts to reconfigure itself. The office building fades and I stands instead on a bare grass land. I lose track of the dreamer.
-My field of vision broaden, partly because of the environment, and partly because I am no longer playing a human.
+My field of vision broaden, partly because of the environment, and partly because I am no longer playing as a human.
 *   [What am I now?]
     I am turned into some kind of dragon, the kind that is alwasy conceived with very limited imagination and preconception by humans.
     **  If I am a dragon, who will the dreamer become?
@@ -97,7 +105,7 @@ I have no doubt about who I am. I am a player of this game this time.
     **  [Yes.] ->dreamfailed
 *   [Try clearing the piece like how the game is supposed to work instead.] ->clearOut
     
-- (clearOut) I am quite good at this game. And yet as a T-shape purple piece is cleared from the bottomline of the grid, the world blasts away with cheerful white light.
+- (clearOut) I am quite good at this game. And yet as a T-shape purple piece is cleared from the bottomline of the grid, the world blasts away with cheerful white light. -> dreamfailed
 
 = dreamfailed
      I did it wrong. The world stops commodating me, and the next moment I am kicked out of the dream. -> DONE
