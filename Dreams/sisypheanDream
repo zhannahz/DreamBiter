@@ -1,26 +1,23 @@
-=== sisypheanDream ===
--> begin
+== sisypheanDream ==
 = begin
-#Author: AngelCui
-//a rock, a huge rock, a huge huge rock
-A rock is rolling after me. It's a HUGE ROCK, and it's growing bigger and bigger.
+# IMAGE: Images/sisyphus/running.png
+A stone is rolling after me. It's a HUGE STONE, and it's growing bigger and bigger, rolling faster and faster. Several times this rock was about to hit my foot. I had to speed up.
 I must be dreaming.
-* [Where am I?] I haven't looked around yet, but I just know that a huge rock is rolling after me. There must be something wrong with the situation, but I have no clue. I look around and I see...-> explore
-* [Why am I getting chased by a rock?] I have no clue. I don't know why I'm here chased by a rock. I am running so fast but I feel nothing. It seems like I'm being controled. -> fightBack
+* [Where am I?] I haven't really "looked around" yet, but I know that a huge stone is rolling after me. I can hear the stone rolling and feel the ground shaking. There must be something wrong with the situation, but I have no clue. I look around and I see...-> explore
+* [Why am I chased by a stone?] I have no clue. I don't know why I'm here chased by a stone. I am running so fast but I feel nothing. It seems like I'm being controled. -> fightBack
 
 = explore
 # IMAGE: Images/sisyphus/blue.png
 * [Nothing] nothing. Nothing is around me. The feeling of being caged is getting stronger. -> fightBack
-* [Blurry blue air] the air. The blurry blue air around me. -> fall
+* [Blurry blue air] the air. The blurry blue air around me. Air should not be visible. Maybe I'm seeing some kind of fog, maybe the sky. -> fall
 * [A rock] the rock. It's a round smooth rock. -> begin
 
 = fightBack
 * I should []fight back. My breathing is getting heavier, as if my chest would explode in the next second. I don't want to be trapped anymore. What do I have? -> options
 
 = fall
-I am surrounded by blue. My head started to hurt. It's so much pain. Some vague memory fragments came to my mind.
-* I want to grab them. -> memory
--> DONE
+Surrounded by blue, my body couldn't feel tired, but my head started to hurt. It's so much pain. Some vague memory fragments came to my mind.
+* I want to grab those memories. -> memory
 
 = memory
 * [Child...Betrayal...Money] I saw myself standing in front of the floor-to-ceiling windows, outside the windows were the city lights that never went out. My child is sitting behind me. Huge room, just the two of us. -> question1
@@ -28,14 +25,13 @@ I am surrounded by blue. My head started to hurt. It's so much pain. Some vague 
 * [Chaos] Chaos, in my head. The harder I tried, the less I remembered. It's like waking up in the morning after a dream. What if this is a dream inside a dream? I should... -> choice
 
 = options
-# IMAGE: Images/sisyphus/running.png
 * [a needle] I have a needle in my hand. What is this needle for? -> choice
-* [a sword] I picked up a sword and waved it towards the sky. I turned around, and I am still running. I swung my sword towards the huge rock. -> die
+* [a sword] I picked up a sword and waved it towards the sky. I turned around, and I am still running. I swung my sword towards the moving stone. -> die
 * [a bird] A bird flew over. -> fall
 
 = choice
 * [kill myself] I should kill myself. There's no end to this life---- I'll never see the end. Only freed from such days can I truly be alive. -> die
-* [stop the falling rock] I should stop the rock. -> surprise
+* [stop the falling rock] I should stop it. -> surprise
 * [do nothing] It's better for me to do nothing.-> question1
 
 = surprise
@@ -43,10 +39,8 @@ I am surrounded by blue. My head started to hurt. It's so much pain. Some vague 
 
 = question1
 + Who -> q2
-
 = q2
 + am -> q3
-
 = q3
 + I?
 -> question
@@ -57,17 +51,27 @@ I am surrounded by blue. My head started to hurt. It's so much pain. Some vague 
 * [Sisyphus] -> life
 
 = die
-Stones run over you heavily. Before you can think about it, you feel the pain in your heart.-> Enter_badDream.dreamDEnd
+The stone run over you heavily. Before you can think about it, you feel the pain in your heart.
+That is the end of your story. You fall into the dream from the very beginning. Look carefully, and maybe you will have a different answer.
+-> Enter_badDream.dreamDEnd
 
 = alive
  ~ successRecorder -= successDreamD
 “You are closed to the truth.” This voice popped into my head.
-+   "Who are you?"
-    "You can say I am you, or I am not you." The voice stopped for a while. "You should really think about a problem... when you play a game, are you the player of the game? Or are played by the game?"
+
++ "Who are you?"
+    "I am you, and I am not you." The voice stopped for a while. "You should really think about a problem... when you play a game, are you the player of the game? Or are played by the game?" -> aliveEnd
+
+= aliveEnd
+
++ "Is this a good dream, or a bad dream?"
+    We never know.
     -> Enter_badDream.dreamDEnd
 
 = life
-Woke up by an alarm clock. Sitting up, I vaguely remember having a nightmare last night. A big ball rolled behind me and almost hit me. Turn on the phone, it's almost time. I quickly get up and repeat my everyday morning routine. 
-Greek mythology has a story of Sisyphus being punished by the gods. He was asked to keep pushing a huge rock up the mountain in hell. When he reach the top of the mountain, the rock will automatically fall back to the foot of the mountain. He will repeat this futile work day after day for eternity.
+Woken up by an alarm clock. Sitting up, I vaguely remember having a nightmare last night. A big ball rolled behind me and almost hit me. It's almost time. I quickly get up and repeat my everyday morning routine. 
+
+Greek mythology has a story of Sisyphus being punished by the gods. He was asked to keep pushing a huge rock up the mountain in hell. When he reaches the top of the mountain, the rock will automatically fall back to the foot of the mountain. He will repeat this futile work day after day for eternity.
+
 Today seems to be the same as every other day, but inexplicably this story comes to my mind.
-    -> Enter_badDream.dreamDEnd
+-> Enter_badDream.dreamDEnd
