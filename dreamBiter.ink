@@ -1,39 +1,38 @@
+# author: AngelCui, JunZhou, HannahZeng
+# theme: dark
+
 VAR dreamCount = 0
-VAR optionCount = 3
+VAR optionCount = 2
 VAR sanity = 10
-//VAR chaos = 0
 VAR currentDream = ""
 LIST successRecorder =
     successDreamA,
     successDreamB,
     successDreamC,
-    successDreamD,
-    successDreamE,
-    successDreamF
-    
+    successDreamD
+
 LIST allDreams = 
     (A), 
     (B), 
     (C), 
-    (D), 
-    (E), 
-    (F)
+    (D)
 
 LIST visitedDreams = (none)
 
-LIST dream_A = (mirrorman), (ism)
+LIST dream_A = (mirrorman)
 
-LIST dream_B = (roleplayer), (ism)
+LIST dream_B = (roleplayer)
 
-LIST dream_C = (dreamer_C), (ism)
+LIST dream_C = (student)
 
-LIST dream_D = (dreamer_D), (ism)
+LIST dream_D = (sisyphus)
 
-LIST dream_E = (dreamer_F), (ism)
 
 -> Introduction
 === Introduction ===
-I am a dream biter, which I learnt as of today. -> becomingDreamBiter
+I am a dream biter, which I learnt as of today. 
+
+-> becomingDreamBiter
 
 = becomingDreamBiter
 * [Accept the duty.] I accept the duty of a dream biter, but not the fate of it. -> Hunt_dream
@@ -100,7 +99,6 @@ I am a dream biter, which I learnt as of today. -> becomingDreamBiter
     
 {LIST_VALUE(chosenDream) == 4: -> Enter_badDream.dreamD } 
     
-{LIST_VALUE(chosenDream) == 5: -> Enter_badDream.dreamE } 
 
     
 
@@ -118,24 +116,28 @@ I am a dream biter, which I learnt as of today. -> becomingDreamBiter
 = dreamB
     This dream is about a {LIST_MIN(dream_B)}.
     INCLUDE Dreams/roleplayDream
-    
+
     {successRecorder !? successDreamB:
         -> Eat_dream
     -  else:
         -> Lose_dream
     }
+    
 = dreamC
     This dream is about a {LIST_MIN(dream_C)}.
-    ...
-    -> Eat_dream
+    INCLUDE Dreams/bombDream
+    
+    {successRecorder !? successDreamC:
+        -> Eat_dream
+    -  else:
+        -> Lose_dream
+    }
+    
 = dreamD
     This dream is about a {LIST_MIN(dream_D)}.
     ...
     -> Eat_dream
-= dreamE
-    This dream is about a {LIST_MIN(dream_E)}.
-    ...
-    -> Eat_dream
+
 
     //fallback
 
@@ -154,6 +156,9 @@ YOUR SANITY LEVEL DECREASE TO {sanity}.
 
 
 === Eat_dream ===
+~ sanity -= 3
+YOUR SANITY LEVEL RESTORE TO {sanity}.
+
 +   [Go on to the next dream] 
     -> Hunt_dream
 +   [Ruminate the dream I just ate] 
@@ -169,14 +174,14 @@ From this <>
 -   2: {dream_B(1)}
 -   3: {dream_C(1)}
 -   4: {dream_D(1)}
--   5: {dream_E(1)}
+
 }<>'s dream, I suddenly {~ understand | comprehend | feel akin to the idea of} <>
 {LIST_VALUE(this):
 -   1: {dream_A(2)}
 -   2: {dream_B(2)}
 -   3: {dream_C(2)}
 -   4: {dream_D(2)}
--   5: {dream_E(2)}
+
 }<>.
 
 -> Eat_dream
@@ -205,6 +210,7 @@ I did had some good dream visits:
 -> END
 
 
+
 === function dreamManager
     There are  
     {LIST_COUNT(successRecorder) > 0:
@@ -213,7 +219,5 @@ I did had some good dream visits:
         <>no dreams that I couldn't comprehend and consume.
     }
     
-    //让玩家回忆之前经历的dream
-
 
 
