@@ -1,5 +1,6 @@
 === mirrorDream ===
 //A dream of one’s own copies
+# IMAGE: Images/mirror/copies.png
 A unusual scenario unfolds in front of me: 3, no, at least 6 persons are concurrently living in the same tiny 1-bedroom 1-bathroom studio, and the glorious skyrocketing buildings as framed by the disproportionately huge French window in the living room makes it even more unusual. Still, that falls within all reasons when compared to the fact that all of those men looks completely identical. 
 *	[Check if I am turned into one of them too.] Ah…I am ok, as how I look everyday: an elephant’s head, tusks, and trunk, with horns and tiger’s claws. 
 Good.
@@ -20,6 +21,7 @@ Good.
 Toward the window I navigate my unconvenient body around this crowded studio. This city looks appalling especially from such a huge window. Intense exposure to not only sunlight (only reflected from the other glass-covered buildings), but also the dusts rendered visible by the light. 
 Let me search for a point of interest. 
 -   (lookAtWindow)
+# IMAGE: Images/mirror/mirrors.png
 +	The street []has the right amount of vehicles a city should have. But no one single human is driving any of them, nor does the sidewalks bear any passengers’ feet. -> lookAtWindow
 +	A woman []is busy polishing her make-up at the northeastern direction to the apartment I am in, where the apartment she lives in is standing only one story below this one. 
 	**	She looks…[] normal. I don’t really know what counts as beautiful or ugly in human’s standard. She looks very even and symmetrical, and her skin color falls between a creamy brown and beige, if I have to come up with some descriptions. 
@@ -30,6 +32,7 @@ Let me search for a point of interest.
 
 
 = talk2
+# IMAGE: Images/mirror/copies.png
 *	Approaching [one of the man…copy.] the one who seems to be arguing with another himself, uh, or the other copy. They noticed me when I failed to keep my sturdy feet from colliding with the bar stool at the Kitchen.
 	“Hey, you, stranger. You appears at the perfect moment. We are in a small trouble and need some help, will you?“
 	
@@ -70,6 +73,7 @@ I waited for their reaction.
                         
 = finalQuestion
 {seeWomanCompleted: 
+    # IMAGE: Images/mirror/mirrors.png
     "Is the woman across the street one of them?" He didn't expect the question, and shakes his head. ->reveal
 - else:
      ->reveal

@@ -3,7 +3,7 @@
 = game1
 Someone busted through the room but I couldn't tell how. Where I am seems to be an office building with an industrial furnishing style. That might come from sometime during humanity's Black Plague period. Across several police-looking humans who are apparently searching for something in great confusion, I am sitting on an extra soft armchair with wooden armrest. 
 -   (surrounding)
-
+# IMAGE: Images/roleplay/rpg1.png
 *   [Look down]
     I apparently embody a human being this time. From the cloth and my position, I can tell this figure I play is an important one among the crowds. 
     -> surrounding
@@ -48,15 +48,15 @@ As he laughs, the world around me collapses and starts to reconfigure itself. Th
 My field of vision broaden, partly because of the environment, and partly because I am no longer playing as a human.
 -   (becomeDragon)
 *   [What am I now?]
-    I am turned into some kind of dragon, the kind that is alwasy conceived with very limited imagination and preconception by humans.
+    I am turned into some kind of oriental dragon, the kind that is alwasy conceived with very limited imagination and preconception by humans. (I mean, not as imaginative as our kind.)
     **  If I am a dragon, who will the dreamer become?
 *   [Where is him?]
 
--   "The arrogant Dragon of Thunderstorm, taste my blade and let me bury you at this peaceful land." 
+-   "The arrogant Dragon of Thunderstorm, taste my blade and let me bury you at this peaceful land." # IMAGE: Images/roleplay/rpg2.png
     It's the voice of a female. Sounds like a young woman and unlike the grown-up male voice before. -> turn1
 
 = turn1
-+   [{Look toward the voice|Again}] {A girl with long straight hair|She} jumps {!down from the sky} and swings her unreasonably long straight sword toward me. 
++   [{Look toward the voice|Again}] {A girl with her long dark hair tied up|She} jumps {!down from the sky} and swings her unreasonably long straight sword toward me. 
     ++  [Defense] -> defense
     ++  [Dodge] -> dodge
         
@@ -111,7 +111,7 @@ Now, everything happen at the millisecond level. I need to do something.
             ->game3
 
 = game3
-
+# IMAGE: Images/roleplay/rpg3.png
 ...A 10*10 grid lies in front of me. Every few seconds, a piece of different color drops in a stable speed from the top to the bottom of the grid. Those items are in fact composed of cubes at the same size of a grid. 
 When pieces of the same color fall adjacent to each other, the cubes that compose of them are crashed into powder and cleared at a straight line.
 I have no doubt about who I am. I am a player of this game this time. 
