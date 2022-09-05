@@ -9,6 +9,7 @@ VAR dreamCount = 0
 VAR optionCount = 2
 VAR sanity = 10
 VAR currentDream = ""
+VAR lastDream = ""
 LIST successRecorder =
     successDreamA,
     successDreamB,
@@ -97,6 +98,7 @@ I am a dream biter, which I learnt as of today.
 
 // redirect to the chosen dream
 = choose(chosenDream)
+~ lastDream = chosenDream
 I{~ walk into | step into | jump into} it {~ without hesitation| having no idea what's awaiting}. #CLEAR
 ~ visitedDreams += chosenDream
 
@@ -116,6 +118,7 @@ I{~ walk into | step into | jump into} it {~ without hesitation| having no idea 
 
     -> mirrorDream
     
+= dreamAEnd
     {successRecorder !? successDreamA:
         -> Eat_dream
     -  else:
@@ -126,6 +129,7 @@ I{~ walk into | step into | jump into} it {~ without hesitation| having no idea 
 
     -> rolePlayDream
     
+= dreamBEnd
     {successRecorder !? successDreamB:
         -> Eat_dream
     -  else:
@@ -136,6 +140,7 @@ I{~ walk into | step into | jump into} it {~ without hesitation| having no idea 
 
     -> bombDream
     
+= dreamCEnd
     {successRecorder !? successDreamC:
         -> Eat_dream
     -  else:
@@ -165,18 +170,19 @@ YOUR SANITY LEVEL DECREASE TO {sanity}.
 
 
 === Eat_dream ===
-~ sanity -= 3
+~ sanity += 3
 YOUR SANITY LEVEL RESTORE TO {sanity}.
 
 +   [Go on to the next dream] 
     -> Hunt_dream
 +   [Ruminate the dream I just ate] 
-    -> Ruminate_dream.thought(currentDream)
+    -> Ruminate_dream.thought(lastDream)
 
 
 === Ruminate_dream ===
 
 = thought(this)
+
 From this <>
 {LIST_VALUE(this):
 -   1: {dream_A(1)}
