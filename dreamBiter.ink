@@ -37,14 +37,10 @@ LIST dream_D = (sisyphus), (sisyphean)
 -> Introduction
 === Introduction ===
 That human called Descarte was right––There is no deception of any form in dreams. My ancestry is a dream biter, and they know it well.
+    #IMAGE: Images/biter/biterImage1.jpg 
 At the last moment before a dream biter dies, they give birth to the predecessor and delivers all knowledge possible. And I am born this moment.
-
-# IMAGE: Images/biter/biterImage1.jpg
-
 They told me this: For endless ages, our kind's mission is to patrol the manifold plateau of dreams––a marvelous creation of the human brain––and eat them.
-While humans call a dream good or bad, wanted or undesirable, and yet for our kind, we have no ethical judgement about our food. 
-
-    -> becomingDreamBiter
+While humans call a dream good or bad, wanted or undesirable, and yet for our kind, we have no ethical judgement about our food. (*PRESS RESTART HERE IF AN OPTION IS MISSING; WE ARE SORRY ABOUT THAT.) -> becomingDreamBiter
 
 = becomingDreamBiter
 * [Embark on fulfilling my duty.] 
@@ -72,10 +68,12 @@ While humans call a dream good or bad, wanted or undesirable, and yet for our ki
         # CLEAR
         I shake away those thoughts because it is the time again.
     }
-    {~I will never get used to this| Ok, I can do this| Let's go}––Closing my eye, I can sense multiple source of mystery. These sources are dreams exhaled from a dreamer.
+    #CELAR
+    {~I will never get used to this| Ok, I can do this| Let's go}
+    ––Closing my eye, I can sense multiple source of mystery. These sources are dreams exhaled from a dreamer.
     
 - else:
-    I have finished all my duty. Now it is the time for me to put an end to this.
+    I have finished all my duty. Now it is the time for me to put an end to this. 
     {LIST_COUNT(successRecorder) == 0:
         <>I wouldn't have believed I can successfully consumed all of those dreams.
         -> Endings.endSubmitting

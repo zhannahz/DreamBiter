@@ -21,11 +21,11 @@ Good.
 Toward the window I navigate my unconvenient body around this crowded studio. This city looks appalling especially from such a huge window. Intense exposure to not only sunlight (only reflected from the other glass-covered buildings), but also the dusts rendered visible by the light. 
 Let me search for a point of interest. 
 -   (lookAtWindow)
-# IMAGE: Images/mirror/mirrors.png
 +	The street []has the right amount of vehicles a city should have. But no one single human is driving any of them, nor does the sidewalks bear any passengers’ feet. -> lookAtWindow
 +	A woman []is busy polishing her make-up at the northeastern direction to the apartment I am in, where the apartment she lives in is standing only one story below this one. 
 	**	She looks…[] normal. I don’t really know what counts as beautiful or ugly in human’s standard. She looks very even and symmetrical, and her skin color falls between a creamy brown and beige, if I have to come up with some descriptions. 
-	    *** (seeWomanCompleted) [Why?] Why only this woman appears in this dream, and only she looks different than the other moving humans?
+	    *** (seeWomanCompleted) [Why?] Why only this woman appears in this dream, and only she looks different than the other moving humans? 
+	        # IMAGE: Images/mirror/mirrors.png
 	    - I need to find other clues.
 	    -> begin
 +	The sky []isn’t a sky at all! It is more of a dome of mirror capturing in entire city and its own reflection. -> lookAtWindow
@@ -89,7 +89,9 @@ I waited for their reaction.
     -> endingSuccess
                 
 = endingFailure
-"You know nothing about me. Get out of here, dream eater. You think I don't know what you are?" His anger grows unexpectantly.
+#CLEAR
+"YOU KNOW NOTHING ABOUT ME!"
+"Get out of here, dream eater. You think I don't know what you are?" His anger grows unexpectantly.
 -> Enter_badDream.dreamAEnd
 
 = endingSuccess
